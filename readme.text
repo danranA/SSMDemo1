@@ -1,0 +1,96 @@
+
+为项目加上mybatis支持
+1.新建java-web项目
+2.拷贝jar包到WEB-INF/lib目录下
+
+3.新建resources文件夹（与src同级）
+    3.1拷贝generatorConfig.xml文件
+        修改目录 targetPackage="com.ssm.xx"
+                targetProject="../src"
+        修改表
+        注意jar包的位置（绝对路径）
+4.打开generatorConfig.xml文件路径show in exploder，在文件目录处，打开命令行：输入语句：
+ java -jar mybatis-generator-core-1.3.2.jar -configfile ../resources/generatorConfig.xml -overwrite
+5.修改dao文件的名字改为DeptDao.java和UserDao.java
+6.将pom.xml文件拷贝到lib
+
+
+
+
+为web项目添加spring支持
+1.建立applicationContext.xml
+    配置：自动注入
+          SqlSessionFactory
+2.在web.xml中配置
+
+为Mybatis添加spring支持
+    1.将mybatisMapper.xml拷贝
+    2.applicationContext.xml文件中配置
+
+为mybatis添加日志支持
+    将log4j.properties拷贝过来
+
+为项目添加springMVC支持
+    1.搭建springmvc.xml框架
+    2.在web.xml文件中配置前端控制器，指定对那些url进行过滤
+创建包：service、action、
+
+
+在inteerfector包下创建interfector
+    LogInterceptor
+    LoginInterceptor
+
+配置springmvc.xml文件
+
+拷贝bootstrap和easyui文件
+
+
+spring-mybatis整合
+
+springmvc
+
+注意事项：utils里的DBUtil中数据库的连接根据需要连接的数据库具体修改 url = "jdbc:mysql://localhost:3306/test?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
